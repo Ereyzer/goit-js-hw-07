@@ -1,3 +1,5 @@
+
+
 const ingredients = [
     'Картопля',
     'Гриби',
@@ -7,17 +9,31 @@ const ingredients = [
     'Приправи',
   ];
 
+
   const ingredientsRef = document.querySelector('#ingredients');
 
+  const makeElemants = array =>{
+    const itemArray = array.map(element => {
+      const elementLi = document.createElement('li');
+      elementLi.textContent = element;
+      
+      return elementLi;
+    });
+    return itemArray;
+  };
 
-  const createIngredient = ingredients.map(element => {
-    const elementLi = document.createElement('li');
-    elementLi.textContent = element;
-    
-    return elementLi;
-  });
+  const addItemsInList = (array, reference, callback) => { reference.append(...callback(array))};
+  // import makegallery from './task-03.js';
+  //  function  addItemsInList  (array, reference, callback) { reference.append(...callback(array))};
+  //  export default {addItemsInList};
+  
 
-  ingredientsRef.append(...createIngredient)
+ 
+
+  addItemsInList(ingredients, ingredientsRef, makeElemants);
+
+
+  
 
 
 

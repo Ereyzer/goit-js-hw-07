@@ -1,11 +1,11 @@
 const arrayOfCategories = document.querySelectorAll('.item');
 
-const counterCategories = array => console.log(`У списку ${array.length} категорії`);
+// const counterCategories = array => console.log(`У списку ${array.length} категорії`);
 
-counterCategories(arrayOfCategories);
+// counterCategories(arrayOfCategories);
 
 const listOfCategories = array => {
-
+    console.log(`У списку ${array.length} категорії`);
     array.forEach(element => {
         const elementTitle = element.querySelector('h2');
         const elementOfListInItem = element.querySelectorAll('li');
