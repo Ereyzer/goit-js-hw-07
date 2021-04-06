@@ -17,7 +17,7 @@ const images = [
   ];
 
   const galleryListRef = document.querySelector('.js-gallery');
-  console.log(galleryListRef);
+
 
   const addGalleryItem = function() {
     const itemOfList = document.createElement('li');
@@ -33,54 +33,3 @@ const images = [
  };
 
  addGallery(images, galleryListRef);
-
-
-
-
-
-
-
-
-
-
-
-
-
-//  const addGallery = (array, reference) => {
-//   reference.classList.add('gallery');
-//  const galleryArray = array.map(element => {
-//      const itemOfList = document.createElement('li');
-//      itemOfList.classList.add('gallery__item');
-//      const imageOfItem = document.createElement('img');
-//      imageOfItem.classList.add('gallery__image');
-//      imageOfItem.src = element.url;
-//      imageOfItem.alt = element.alt;
-//      itemOfList.appendChild(imageOfItem);
-//      return itemOfList;
-//  });
-//  reference.append(...galleryArray);
-// };
-
-// addGallery(images, galleryListRef);
-
-//! experement
-
-//  const makegallery = (array, reference) => {
-//           reference.classList.add('gallery');
-//     const galleryArray = array.map(element => {
-//         const itemOfList = document.createElement('li');
-//         itemOfList.classList.add('gallery__item');
-//         const imageOfItem = document.createElement('img');
-//         imageOfItem.classList.add('gallery__image');
-//         imageOfItem.src = element.url;
-//         imageOfItem.alt = element.alt;
-//         itemOfList.appendChild(imageOfItem);
-//         return itemOfList;
-//     });
-//     return galleryArray;
-//  };
-//  import addItemsInList from './task-02.js';
-
-//  addItemsInList(images,galleryListRef, makegallery);
-
-//  export default {makegallery};

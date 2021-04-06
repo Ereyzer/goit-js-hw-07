@@ -23,9 +23,7 @@ const ingredients = [
   };
 
   const addItemsInList = (array, reference, callback) => { reference.append(...callback(array))};
-  // import makegallery from './task-03.js';
-  //  function  addItemsInList  (array, reference, callback) { reference.append(...callback(array))};
-  //  export default {addItemsInList};
+
   
 
  

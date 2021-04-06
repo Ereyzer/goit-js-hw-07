@@ -1,9 +1,5 @@
 const arrayOfCategories = document.querySelectorAll('.item');
 
-// const counterCategories = array => console.log(`У списку ${array.length} категорії`);
-
-// counterCategories(arrayOfCategories);
-
 const listOfCategories = array => {
     console.log(`У списку ${array.length} категорії`);
     array.forEach(element => {
