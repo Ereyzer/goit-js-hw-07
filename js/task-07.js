@@ -4,5 +4,7 @@ const ref = {
 }
 
 ref.input.addEventListener('input', () => ref.span.setAttribute('style', `font-size: ${Number(ref.input.value) + 10}px`));
+
  
 
+// ref.span.setAttribute('style', `font-size: ${Number(ref.input.value) + 10}px`);
