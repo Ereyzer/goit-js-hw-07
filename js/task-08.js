@@ -43,20 +43,3 @@ function destroyBoxes ()  {
 };
 
 clearBtn.addEventListener('click', destroyBoxes);
-
-
-
-
-    
-
-
-
-// Розміри найпершого div - 30px на 30px
-// Кожен наступний div після першого, повинен бути ширше і вище попереднього на   10px
-
-
-// const red = renderColor(0, 255);
-// const green = renderColor(0, 255);
-// const blue = renderColor(0, 255);
-// const color = `rgb(${red}, ${green}, ${blue})`
-// console.log(color);
