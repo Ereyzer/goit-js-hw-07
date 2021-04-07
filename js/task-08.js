@@ -7,20 +7,27 @@ const refs = {
 }
 const {controlBox, input, createBtn, clearBtn, boxesList} = refs;
 
+createBtn.addEventListener('click', onClickRender);
+
+
 const renderColor = () => Math.round(Math.random() * (250 - 0) + 0);
-const renderRGBColor = (callback) => `rgb(${callback()}, ${callback()}, ${callback()})`
+const renderRGBColor = (callback) => `rgb(${callback()}, ${callback()}, ${callback()})`;
 
 const createBoxes = (amount) =>{
     const boxes = [];
     for(let i = 0; i < amount; i += 1){
         const box = document.createElement('div');
+        const size = i * 10 + 30;
         box.setAttribute('style', `background-color: ${renderRGBColor(renderColor)};
-                                    width: calc(${i} * 10px + 30px);
-                                    height: calc(${i} * 10px + 30px);`);
+                                    width: ${size}px;
+                                    height: ${size}px;`);
         boxes.push(box);
-    }
-    boxesList.classList.toggle('container-task8')
-    createBtn.removeEventListener('click', onClickRender);
+    };
+    if(boxes[0]){
+     createBtn.removeEventListener('click', onClickRender);
+     boxesList.classList.toggle('container-task8');
+     clearBtn.addEventListener('click', destroyBoxes);
+    };
     return boxes;
 };
 
@@ -32,14 +39,45 @@ function onClickRender() {
     return addBoxes(boxesList, createBoxes)
 }
 
-createBtn.addEventListener('click', onClickRender);
-
 function destroyBoxes ()  {
-    const itemsInBoxes = boxesList.querySelectorAll('div')
-    
-    itemsInBoxes.forEach(el => el.remove());
+    boxesList.innerHTML = '';
     boxesList.classList.toggle('container-task8')
-    return createBtn.addEventListener('click', onClickRender);
+     createBtn.addEventListener('click', onClickRender);
+     clearBtn.removeEventListener('click', destroyBoxes);
 };
 
-clearBtn.addEventListener('click', destroyBoxes);
+
+
+
+
+
+
+
+
+
+
+// function destroyBoxes ()  {
+//     const itemsInBoxes = boxesList.querySelectorAll('div')
+    
+//     itemsInBoxes.forEach(el => el.remove());
+//     boxesList.classList.toggle('container-task8')
+//     return createBtn.addEventListener('click', onClickRender);
+// };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
