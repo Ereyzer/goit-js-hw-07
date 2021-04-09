@@ -40,6 +40,7 @@ function onClickRender() {
 }
 
 function destroyBoxes ()  {
+    input.value = '';
     boxesList.innerHTML = '';
     boxesList.classList.toggle('container-task8')
      createBtn.addEventListener('click', onClickRender);
